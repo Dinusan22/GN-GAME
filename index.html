@@ -8,32 +8,21 @@
 <body>
 
     <div class="game">
-
         <h1>💡 Guess the Number</h1>
-
         <p>Pick a number between 1 - 10</p>
-
         <input id="guessnumber" type="number" placeholder="Enter your guess">
-
         <button onclick="check()">Check</button>
-
         <p id="result">You are Wrong or Right</p>
-
         <p id="score">Score: 10</p>
 
     </div>
-
-
     <script>
-
         var guessnumber = document.getElementById("guessnumber")
         var result = document.getElementById("result")
         var score = document.getElementById("score")
 
         var randomnumber = Math.floor(Math.random() * 10) + 1
-
         var totalscore = 10
-
         function check()
         {
             var enterednumber = Number(guessnumber.value)
@@ -47,9 +36,7 @@
             else
             {
                 totalscore = totalscore - 1
-
                 score.textContent = "Score: " + totalscore
-
                 result.textContent = "Wrong! ❌"
                 result.style.color = "red"
             }
